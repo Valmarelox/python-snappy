@@ -1,4 +1,4 @@
-# python-snappy
+# snappy-pure
 
 Pure Python Snappy decompression library.
 
@@ -11,13 +11,18 @@ Pure Python Snappy decompression library.
 ## Installation
 
 ```bash
-pip install python-snappy
+uv add snappy-pure
+```
+
+Or with pip:
+```bash
+pip install snappy-pure
 ```
 
 ## Usage
 
 ```python
-from python_snappy import decompress
+from snappy_pure import decompress
 
 # Decompress snappy data
 compressed_data = b'...'  # Your snappy compressed data
@@ -30,6 +35,13 @@ decompressed = decompress(compressed_data)
 - Performance is slower than C-based implementations
 
 For production use with large data, consider using the `python-snappy` package from PyPI which wraps the C library.
+
+## Development
+
+```bash
+uv sync --extra test
+uv run pytest
+```
 
 ## License
 

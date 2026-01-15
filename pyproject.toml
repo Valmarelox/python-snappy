@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "python-snappy"
+name = "snappy-pure"
 version = "0.1.0"
 description = "Pure Python Snappy decompression"
 readme = "README.md"
@@ -26,5 +26,5 @@ classifiers = [
 test = ["pytest>=7.0", "python-snappy>=0.6"]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/python-snappy"
-Repository = "https://github.com/yourusername/python-snappy"
+Homepage = "https://github.com/yourusername/snappy-pure"
+Repository = "https://github.com/yourusername/snappy-pure"
