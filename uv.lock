@@ -200,7 +200,7 @@ wheels = [
 ]
 
 [[package]]
-name = "snappy-pure"
+name = "python-snappy-pure"
 version = "0.1.0"
 source = { editable = "." }
 

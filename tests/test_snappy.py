@@ -24,7 +24,7 @@ class TestSnappyDecompression:
     @pytest.fixture
     def custom_snappy(self):
         """Get the custom snappy decompression function."""
-        from snappy_pure import decompress
+        from python_snappy import decompress
 
         return decompress
 
@@ -147,7 +147,7 @@ class TestSnappyEdgeCases:
 
     @pytest.fixture
     def custom_snappy(self):
-        from snappy_pure import decompress
+        from python_snappy import decompress
 
         return decompress
 
@@ -201,13 +201,13 @@ class TestSnappyErrorHandling:
 
     @pytest.fixture
     def custom_snappy(self):
-        from snappy_pure import decompress
+        from python_snappy import decompress
 
         return decompress
 
     def test_truncated_varint(self, custom_snappy):
         """Test handling of truncated varint."""
-        from snappy_pure import CompressionError
+        from python_snappy import CompressionError
 
         # High bit set but no continuation byte
         with pytest.raises(CompressionError):
@@ -215,7 +215,7 @@ class TestSnappyErrorHandling:
 
     def test_truncated_literal(self, custom_snappy):
         """Test handling of truncated literal data."""
-        from snappy_pure import CompressionError
+        from python_snappy import CompressionError
 
         # Varint says 10 bytes, but only header present
         with pytest.raises(CompressionError):
